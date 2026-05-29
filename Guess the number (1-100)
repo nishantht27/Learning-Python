@@ -12,4 +12,4 @@ while True :
     elif a<b:
         print('Too_Low')
     else:
-        print('Guess_a_valid_Number')
+        print('Please_Enter_a_valid_Number')
