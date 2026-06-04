@@ -8,7 +8,8 @@ while True :
       if a == b :
           print('Congratulations_You_Won 🏆')
           again = input('Try Again? (yes/no)').lower()
-          if again=='yes'
+          if again=='yes':
+             b = random.randint(1,100)
              continue
           else:
              print('Thanks For Playing...☺️')
