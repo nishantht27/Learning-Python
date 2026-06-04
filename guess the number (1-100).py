@@ -2,14 +2,20 @@ import random
 
 b = random.randint(1,100)
 while True :
-    a = int(input('Guess the number between 1 to 100'))
-    print('\n',a)
-    if a == b :
-        print('Congratulations_You_Won')
-        break    
-    elif a>b :
-        print('Too_High')
-    elif a<b:
-        print('Too_Low')
-    else:
-        print('Please_Enter_a_valid_Number')
+   try:
+      a = int(input('Guess the number between 1 to 100'))
+      print('\n',a)
+      if a == b :
+          print('Congratulations_You_Won 🏆')
+          again = input('Try Again? (yes/no)').lower()
+          if again=='yes'
+             continue
+          else:
+             print('Thanks For Playing...☺️')
+             break    
+      elif a>b :
+          print('Too_High 📈')
+      else:
+          print('Too_Low 📉')
+    except ValueError :
+          print('Please_Enter_a_valid_Number ❌')
