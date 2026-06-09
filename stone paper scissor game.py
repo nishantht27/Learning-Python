@@ -14,4 +14,4 @@ while True :
        print('YOU WON!! 🔥')
        break
   else:
-       print('BETTER LUCK NEXT TIME 😅')
+       print('BETTER LUCK NEXT TIME 😜')
