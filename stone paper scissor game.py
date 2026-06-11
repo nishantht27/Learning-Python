@@ -11,7 +11,7 @@ while True :
   elif (a == 'stone' and b == 'scissor') or \
        (a == 'paper' and b == 'stone') or \
        (a == 'scissor' and b == 'paper'):
-       print('YOU WON!! 🔥')
+       print('YOU WON!! ')
        break
   else:
-       print('BETTER LUCK NEXT TIME 😜')
+       print('BETTER LUCK NEXT TIME ')
