@@ -24,11 +24,21 @@ while True:
     option = input("Enter option(1/2/3/4): ")
     
     if option == "1":
-        expense_id += 1
         print("====== ADD EXPENSE ======")
-        add = input("Enter amount : ₹")
+        try:
+            add = float(input("Enter amount : ₹"))
+            if add <= 0:
+                print("Amount should be Positive")
+                continue
+        except ValueError:
+            print("Enter a Valid Amount")
+            continue
         cat = input("Enter Category :")
+        if not cat:
+            print("Category can't be empty")
+            continue
         des = input("Enter Description :")
+        expense_id += 1
         exp = {
             "ID":expense_id,
             "Amount":add,
@@ -44,7 +54,7 @@ while True:
          print("====== ALL EXPENSES ======")
          total = 0
          for exp in expense:
-             total += int(exp["Amount"])
+             total += exp["Amount"]
              print("ID :",exp["ID"])
              print("Amount: ₹",exp["Amount"])
              print("Category: ",exp["Category"])
