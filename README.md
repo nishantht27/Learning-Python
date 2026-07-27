@@ -25,14 +25,20 @@ This repo will grow as I continue my programming journey and explore more advanc
 - Object Oriented Programming (OOP)
 - Mini Python Projects
 
+
 ## 🚀 Mini Projects
-Some beginner-friendly projects included in this repository:
 
-🎮 Number Guessing Game  
-🧮 Calculator  
-🎲 Random-based Programs  
-(More projects coming soon...)
+This repository includes several beginner-friendly Python projects created while learning and practicing Python programming. These projects helped me improve my understanding of Python fundamentals, programming logic, conditional statements, loops, functions, user input, randomization, file handling, and basic project structure.
 
+### Projects Included:
+
+- 💰 **Expense Tracker** – A simple command-line application for managing and tracking daily expenses.
+- 🏏 **Hand Cricket (CLI)** – A command-line hand cricket game built using Python logic and randomization.
+- 🎯 **Guess the Number (1–100)** – A number guessing game where the user tries to guess a randomly generated number.
+- 🪨 **Rock Paper Scissors Game** – A classic command-line game built using conditional statements and random choices.
+- ❌⭕ **Tic Tac Toe** – A two-player command-line game that helped me practice game logic and decision-making.
+
+More projects coming soon...
 ## 🛠️ Tools Used
 - Python 🐍
 - VS Code 💻
