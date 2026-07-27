@@ -1,0 +1,82 @@
+import json
+expense = []
+ids = []
+
+try:
+    with open("expense.json","r") as file:
+        expense = json.load(file)
+except FileNotFoundError:
+    expense = []
+    
+if expense:
+    for exp in expense:
+        ids.append(exp["ID"])
+    expense_id = max(ids)
+else:
+    expense_id = 0
+    
+while True:
+    print("====== EXPENSE TRACKER ======")
+    print("1. Add Expense")
+    print("2. View Expense")
+    print("3. Delete Expense")
+    print("4. Exit")
+    option = input("Enter option(1/2/3/4): ")
+    
+    if option == "1":
+        expense_id += 1
+        print("====== ADD EXPENSE ======")
+        add = input("Enter amount : ₹")
+        cat = input("Enter Category :")
+        des = input("Enter Description :")
+        exp = {
+            "ID":expense_id,
+            "Amount":add,
+            "Category":cat,
+            "Description":des,
+        }
+        expense.append(exp)
+        
+        with open("expense.json","w") as file:
+            json.dump(expense,file)
+            
+    elif option == "2":
+         print("====== ALL EXPENSES ======")
+         total = 0
+         for exp in expense:
+             total += int(exp["Amount"])
+             print("ID :",exp["ID"])
+             print("Amount: ₹",exp["Amount"])
+             print("Category: ",exp["Category"])
+             print("Description: ",exp["Description"])
+             print("----------------------")
+         print("Total Expense:",total)
+         
+    elif option == "3":
+        deleted = False
+        
+        try:
+          remove = int(input("Enter ID :"))
+        except ValueError:
+            print("Enter a valid ID")
+            continue
+            
+        for i in expense:
+             if remove == i["ID"]:
+                 expense.remove(i)
+                 deleted = True
+                 
+                 with open("expense.json", "w") as file:
+                     json.dump(expense, file)
+                     
+                 print("Expense Deleted Successfully")
+                 break
+        if deleted == False:
+                 print("Expense ID Not Found")
+             
+    elif option == "4":
+         print("Thank You")
+         break
+         
+    else:
+         print("Invalid Option")
